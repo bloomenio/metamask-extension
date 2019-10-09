@@ -5,6 +5,13 @@
 ## 7.3.0 Fri Sep 27 2019
 - [#7168](https://github.com/MetaMask/metamask-extension/pull/7168): Add fixes for German translations
 
+## 7.2.3 Fri Oct 04 2019
+- [#7252](https://github.com/MetaMask/metamask-extension/pull/7252): Fix gas limit when sending tx without data to a contract
+- [#7260](https://github.com/MetaMask/metamask-extension/pull/7260): Do not transate on seed phrases
+
+## 7.2.2 Tue Sep 24 2019
+- [#7213](https://github.com/MetaMask/metamask-extension/pull/7213): Update minimum Firefox verison to 56.0
+
 ## 7.2.1 Tue Sep 17 2019
 - [#7180](https://github.com/MetaMask/metamask-extension/pull/7180): Add `appName` message to each locale
 
