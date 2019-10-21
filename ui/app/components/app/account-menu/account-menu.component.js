@@ -239,7 +239,7 @@ export default class AccountMenu extends PureComponent {
           { this.renderScrollButton() }
         </div>
         <Divider />
-        <Item
+        {/* <Item
           onClick={() => {
             toggleAccountMenu()
             metricsEvent({
@@ -258,8 +258,8 @@ export default class AccountMenu extends PureComponent {
             />
           }
           text={t('createAccount')}
-        />
-        <Item
+        /> */}
+        {/* <Item
           onClick={() => {
             toggleAccountMenu()
             metricsEvent({
@@ -278,8 +278,8 @@ export default class AccountMenu extends PureComponent {
             />
           }
           text={t('importAccount')}
-        />
-        <Item
+        /> */}
+        {/* <Item
           onClick={() => {
             toggleAccountMenu()
             metricsEvent({
@@ -303,8 +303,8 @@ export default class AccountMenu extends PureComponent {
           }
           text={t('connectHardwareWallet')}
         />
-        <Divider />
-        <Item
+        <Divider /> */}
+        {/* <Item
           onClick={() => {
             toggleAccountMenu()
             history.push(ABOUT_US_ROUTE)
@@ -313,8 +313,8 @@ export default class AccountMenu extends PureComponent {
             <img src="images/mm-info-icon.svg" />
           }
           text={t('infoHelp')}
-        />
-        <Item
+        /> */}
+        {/* <Item
           onClick={() => {
             toggleAccountMenu()
             history.push(SETTINGS_ROUTE)
@@ -333,7 +333,7 @@ export default class AccountMenu extends PureComponent {
             />
           }
           text={t('settings')}
-        />
+        /> */}
       </Menu>
     )
   }
