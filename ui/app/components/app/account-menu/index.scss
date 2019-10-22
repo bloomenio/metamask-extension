@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 100;
   top: 58px;
-  width: 310px;
+  width: 160px;
 
   @media screen and (max-width: 575px) {
     right: calc(((100vw - 100%) / 2) + 8px);
@@ -32,7 +32,7 @@
   &__header {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
   }
 

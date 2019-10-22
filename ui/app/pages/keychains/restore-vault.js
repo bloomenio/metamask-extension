@@ -27,8 +27,8 @@ class RestoreVaultPage extends Component {
 
   state = {
     seedPhrase: '',
-    password: '',
-    confirmPassword: '',
+    password: 'H2020_Bloomen',
+    confirmPassword: 'H2020_Bloomen',
     seedPhraseError: null,
     passwordError: null,
     confirmPasswordError: null,
@@ -152,7 +152,7 @@ class RestoreVaultPage extends Component {
             <span className="error">
               { seedPhraseError }
             </span>
-            <TextField
+            {/* <TextField
               id="password"
               label={t('newPassword')}
               type="password"
@@ -175,7 +175,7 @@ class RestoreVaultPage extends Component {
               autoComplete="confirm-password"
               margin="normal"
               largeLabel
-            />
+            /> */}
             <Button
               type="first-time"
               className="first-time-flow__button"

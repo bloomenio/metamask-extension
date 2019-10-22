@@ -46,7 +46,7 @@ export default class AccountMenu extends PureComponent {
     const { isAccountMenuOpen } = this.props
 
     if (!prevIsAccountMenuOpen && isAccountMenuOpen) {
-      this.setAtAccountListBottom()
+     // this.setAtAccountListBottom()
     }
   }
 
@@ -165,21 +165,21 @@ export default class AccountMenu extends PureComponent {
     )
   }
 
-  setAtAccountListBottom = () => {
-    const target = document.querySelector('.account-menu__accounts')
-    const { scrollTop, offsetHeight, scrollHeight } = target
-    const atAccountListBottom = scrollTop + offsetHeight >= scrollHeight
-    this.setState({ atAccountListBottom })
-  }
+  // setAtAccountListBottom = () => {
+  //   const target = document.querySelector('.account-menu__accounts')
+  //   const { scrollTop, offsetHeight, scrollHeight } = target
+  //   const atAccountListBottom = scrollTop + offsetHeight >= scrollHeight
+  //   this.setState({ atAccountListBottom })
+  // }
 
-  onScroll = debounce(this.setAtAccountListBottom, 25)
+  // onScroll = debounce(this.setAtAccountListBottom, 25)
 
   handleScrollDown = e => {
     e.stopPropagation()
     const target = document.querySelector('.account-menu__accounts')
     const { scrollHeight } = target
     target.scroll({ left: 0, top: scrollHeight, behavior: 'smooth' })
-    this.setAtAccountListBottom()
+    //this.setAtAccountListBottom()
   }
 
   renderScrollButton () {
@@ -217,7 +217,7 @@ export default class AccountMenu extends PureComponent {
       >
         <CloseArea onClick={toggleAccountMenu} />
         <Item className="account-menu__header">
-          { t('myAccounts') }
+          {/* { t('myAccounts') } */}
           <button
             className="account-menu__logout-button"
             onClick={() => {
@@ -228,7 +228,7 @@ export default class AccountMenu extends PureComponent {
             { t('logout') }
           </button>
         </Item>
-        <Divider />
+        {/* <Divider />
         <div className="account-menu__accounts-container">
           <div
             className="account-menu__accounts"
@@ -238,7 +238,7 @@ export default class AccountMenu extends PureComponent {
           </div>
           { this.renderScrollButton() }
         </div>
-        <Divider />
+        <Divider /> */}
         {/* <Item
           onClick={() => {
             toggleAccountMenu()

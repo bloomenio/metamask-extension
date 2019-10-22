@@ -27,7 +27,7 @@ export default class UnlockPage extends Component {
     super(props)
 
     this.state = {
-      password: '',
+      password: 'H2020_Bloomen',
       error: null,
     }
 
@@ -156,7 +156,7 @@ export default class UnlockPage extends Component {
             className="unlock-page__form"
             onSubmit={this.handleSubmit}
           >
-            <TextField
+            {/* <TextField
               id="password"
               label={t('password')}
               type="password"
@@ -167,7 +167,7 @@ export default class UnlockPage extends Component {
               autoComplete="current-password"
               material
               fullWidth
-            />
+            /> */}
           </form>
           { this.renderSubmitButton() }
           <div className="unlock-page__links">
