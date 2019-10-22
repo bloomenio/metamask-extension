@@ -105,35 +105,35 @@ AccountDetailsDropdown.prototype.render = function () {
       text: this.context.t('accountDetails'),
       icon: h(`img`, { src: 'images/info.svg', style: { height: '15px' } }),
     }),
-    h(Item, {
-      onClick: (e) => {
-        e.stopPropagation()
-        this.context.metricsEvent({
-          eventOpts: {
-            category: 'Navigation',
-            action: 'Account Options',
-            name: 'Clicked View on Etherscan',
-          },
-        })
-        viewOnEtherscan(address, network, rpcPrefs)
-        this.props.onClose()
-      },
-      text: (rpcPrefs.blockExplorerUrl
-        ? this.context.t('viewinExplorer')
-        : this.context.t('viewOnEtherscan')),
-      subText: (rpcPrefs.blockExplorerUrl
-        ? rpcPrefs.blockExplorerUrl.match(/^https?:\/\/(.+)/)[1]
-        : null),
-      icon: h(`img`, { src: 'images/open-etherscan.svg', style: { height: '15px' } }),
-    }),
-    isRemovable ? h(Item, {
-      onClick: (e) => {
-        e.stopPropagation()
-        showRemoveAccountConfirmationModal(selectedIdentity)
-        this.props.onClose()
-      },
-      text: this.context.t('removeAccount'),
-      icon: h(`img`, { src: 'images/hide.svg', style: { height: '15px' } }),
-    }) : null,
+    // h(Item, {
+    //   onClick: (e) => {
+    //     e.stopPropagation()
+    //     this.context.metricsEvent({
+    //       eventOpts: {
+    //         category: 'Navigation',
+    //         action: 'Account Options',
+    //         name: 'Clicked View on Etherscan',
+    //       },
+    //     })
+    //     viewOnEtherscan(address, network, rpcPrefs)
+    //     this.props.onClose()
+    //   },
+    //   text: (rpcPrefs.blockExplorerUrl
+    //     ? this.context.t('viewinExplorer')
+    //     : this.context.t('viewOnEtherscan')),
+    //   subText: (rpcPrefs.blockExplorerUrl
+    //     ? rpcPrefs.blockExplorerUrl.match(/^https?:\/\/(.+)/)[1]
+    //     : null),
+    //   icon: h(`img`, { src: 'images/open-etherscan.svg', style: { height: '15px' } }),
+    // }),
+    // isRemovable ? h(Item, {
+    //   onClick: (e) => {
+    //     e.stopPropagation()
+    //     showRemoveAccountConfirmationModal(selectedIdentity)
+    //     this.props.onClose()
+    //   },
+    //   text: this.context.t('removeAccount'),
+    //   icon: h(`img`, { src: 'images/hide.svg', style: { height: '15px' } }),
+    // }) : null,
   ])
 }
