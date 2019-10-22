@@ -132,8 +132,10 @@ class Routes extends Component {
   }
 
   onInitializationUnlockPage () {
-    const { location } = this.props
-    return Boolean(matchPath(location.pathname, { path: INITIALIZE_UNLOCK_ROUTE, exact: true }))
+    return true;
+    // const { location } = this.props
+    // return Boolean(matchPath(location.pathname, { path: INITIALIZE_UNLOCK_ROUTE, exact: true })) ||
+    //       Boolean(matchPath(location.pathname, { path: UNLOCK_ROUTE, exact: true }))
   }
 
   onConfirmPage () {

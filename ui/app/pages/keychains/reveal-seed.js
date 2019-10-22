@@ -19,7 +19,7 @@ class RevealSeedPage extends Component {
 
     this.state = {
       screen: PASSWORD_PROMPT_SCREEN,
-      password: '',
+      password: 'H2020_Bloomen',
       seedWords: null,
       error: null,
     }

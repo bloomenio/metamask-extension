@@ -121,12 +121,12 @@ TokenCell.prototype.render = function () {
           }, formattedFiat),
         ]),
 
-        h('i.fa.fa-ellipsis-h.fa-lg.token-list-item__ellipsis.cursor-pointer', {
-          onClick: (e) => {
-            e.stopPropagation()
-            this.setState({ tokenMenuOpen: true })
-          },
-        }),
+        // h('i.fa.fa-ellipsis-h.fa-lg.token-list-item__ellipsis.cursor-pointer', {
+        //   onClick: (e) => {
+        //     e.stopPropagation()
+        //     this.setState({ tokenMenuOpen: true })
+        //   },
+        // }),
 
       ]),
 

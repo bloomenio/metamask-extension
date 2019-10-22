@@ -20,8 +20,8 @@ export default class NewAccount extends PureComponent {
   }
 
   state = {
-    password: '',
-    confirmPassword: '',
+    password: 'H2020_Bloomen',
+    confirmPassword: 'H2020_Bloomen',
     passwordError: '',
     confirmPasswordError: '',
     termsChecked: false,
@@ -167,7 +167,7 @@ export default class NewAccount extends PureComponent {
           className="first-time-flow__form"
           onSubmit={this.handleCreate}
         >
-          <TextField
+          {/* <TextField
             id="create-password"
             label={t('newPassword')}
             type="password"
@@ -193,7 +193,7 @@ export default class NewAccount extends PureComponent {
             margin="normal"
             fullWidth
             largeLabel
-          />
+          /> */}
           <div className="first-time-flow__checkbox-container" onClick={this.toggleTermsCheck}>
             <div className="first-time-flow__checkbox">
               {termsChecked ? <i className="fa fa-check fa-2x" /> : null}

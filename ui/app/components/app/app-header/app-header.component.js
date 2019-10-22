@@ -91,6 +91,7 @@ export default class AppHeader extends PureComponent {
       <div
         className={classnames('app-header', { 'app-header--back-drop': isUnlocked })}>
         <div className="app-header__contents">
+          <img  src='/images/logo/bloomen.svg'></img>
           <MetaFoxLogo
             unsetIconHeight={true}
             onClick={() => history.push(DEFAULT_ROUTE)}

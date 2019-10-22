@@ -318,6 +318,7 @@ module.exports = class MetamaskController extends EventEmitter {
       ThreeBoxController: this.threeBoxController.store,
       ABTestController: this.abTestController.store,
     })
+
     this.memStore.subscribe(this.sendUpdate.bind(this))
   }
 
@@ -488,7 +489,8 @@ module.exports = class MetamaskController extends EventEmitter {
       setAccountLabel: nodeify(preferencesController.setAccountLabel, preferencesController),
       setFeatureFlag: nodeify(preferencesController.setFeatureFlag, preferencesController),
       setPreference: nodeify(preferencesController.setPreference, preferencesController),
-      completeOnboarding: nodeify(preferencesController.completeOnboarding, preferencesController),
+      completeOnboarding: nodeify(this.completeOnboarding, this),
+      //completeOnboarding: nodeify(preferencesController.completeOnboarding, preferencesController),
       addKnownMethodData: nodeify(preferencesController.addKnownMethodData, preferencesController),
       unsetMigratedPrivacyMode: nodeify(preferencesController.unsetMigratedPrivacyMode, preferencesController),
 
@@ -593,6 +595,15 @@ module.exports = class MetamaskController extends EventEmitter {
       releaseLock()
       throw err
     }
+  }
+
+  async completeOnboarding(){
+    this.setCustomRpc('https://0x.bloomen.io/rpc/telsius/metamask', '83584648538' , undefined, 'Alastria Telsius', {}).then(
+      () => {
+          this.preferencesController.addToken('0x0956A942B4EE8C7867E7E203f6A09E5077449dCF','BLO',0,"/images/logo/bloomen.png");
+      }
+    )
+    return this.preferencesController.completeOnboarding();
   }
 
   /**
