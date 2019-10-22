@@ -23,8 +23,8 @@ export default class ImportWithSeedPhrase extends PureComponent {
 
   state = {
     seedPhrase: '',
-    password: '',
-    confirmPassword: '',
+    password: 'H2020_Bloomen',
+    confirmPassword: 'H2020_Bloomen',
     seedPhraseError: '',
     passwordError: '',
     confirmPasswordError: '',
@@ -237,7 +237,7 @@ export default class ImportWithSeedPhrase extends PureComponent {
             </span>
           )
         }
-        <TextField
+        {/* <TextField
           id="password"
           label={t('newPassword')}
           type="password"
@@ -260,7 +260,7 @@ export default class ImportWithSeedPhrase extends PureComponent {
           autoComplete="confirm-password"
           margin="normal"
           largeLabel
-        />
+        /> */}
         <div className="first-time-flow__checkbox-container" onClick={this.toggleTermsCheck}>
           <div className="first-time-flow__checkbox">
             {termsChecked ? <i className="fa fa-check fa-2x" /> : null}
