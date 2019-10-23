@@ -10,6 +10,7 @@ import {
   turnThreeBoxSyncingOn,
   getThreeBoxLastUpdated,
   setShowRestorePromptToFalse,
+  setSelectedToken,
 } from '../../store/actions'
 import { setThreeBoxLastUpdated } from '../../ducks/app/app'
 import { getEnvironmentType } from '../../../../app/scripts/lib/util'
@@ -48,6 +49,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
+  setSelectedToken: address => dispatch(setSelectedToken(address)),
   unsetMigratedPrivacyMode: () => dispatch(unsetMigratedPrivacyMode()),
   turnThreeBoxSyncingOn: () => dispatch(turnThreeBoxSyncingOn()),
   setupThreeBox: () => {

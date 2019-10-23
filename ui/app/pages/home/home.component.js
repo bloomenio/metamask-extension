@@ -74,10 +74,12 @@ export default class Home extends PureComponent {
       setupThreeBox,
       showRestorePrompt,
       threeBoxLastUpdated,
+      //setSelectedToken,
     } = this.props
     if (threeBoxSynced && showRestorePrompt && threeBoxLastUpdated === null) {
       setupThreeBox()
     }
+    //setSelectedToken('0x0956A942B4EE8C7867E7E203f6A09E5077449dCF')
   }
 
   render () {
@@ -107,6 +109,9 @@ export default class Home extends PureComponent {
         <ProviderApproval providerRequest={providerRequests[0]} />
       )
     }
+
+
+
     return (
       <div className="main-container">
         <div className="account-and-transaction-details">

@@ -156,13 +156,13 @@ export default class EnsInput extends Component {
             className="ens-input__wrapper__input"
             type="text"
             dir="auto"
-            placeholder={t('recipientAddressPlaceholder')}
+            // placeholder={t('recipientAddressPlaceholder')}
             onChange={this.onChange}
             onPaste={this.onPaste}
             value={selectedAddress || input}
             autoFocus
           />
-          <div
+          {/* <div
             className={c('ens-input__wrapper__action-icon', {
               'ens-input__wrapper__action-icon--erase': input,
               'ens-input__wrapper__action-icon--qrcode': !input,
@@ -174,7 +174,7 @@ export default class EnsInput extends Component {
                 this.props.scanQrCode()
               }
             }}
-          />
+          /> */}
         </div>
       </div>
     )

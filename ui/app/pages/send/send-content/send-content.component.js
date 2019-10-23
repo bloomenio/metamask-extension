@@ -22,15 +22,19 @@ export default class SendContent extends Component {
     addressBook: PropTypes.array,
     contact: PropTypes.object,
     isOwnedAccount: PropTypes.bool,
+    setGasPrice: PropTypes.func,
   }
+
 
   updateGas = (updateData) => this.props.updateGas(updateData)
 
+
   render () {
+
     return (
       <PageContainerContent>
         <div className="send-v2__form">
-          { this.maybeRenderAddContact() }
+          {/* { this.maybeRenderAddContact() } */}
           <SendAssetRow />
           <SendAmountRow updateGas={this.updateGas} />
           <SendGasRow />
@@ -46,22 +50,22 @@ export default class SendContent extends Component {
     )
   }
 
-  maybeRenderAddContact () {
-    const { t } = this.context
-    const { isOwnedAccount, showAddToAddressBookModal, contact = {} } = this.props
+  // maybeRenderAddContact () {
+  //   const { t } = this.context
+  //   const { isOwnedAccount, showAddToAddressBookModal, contact = {} } = this.props
 
-    if (isOwnedAccount || contact.name) {
-      return
-    }
+  //   if (isOwnedAccount || contact.name) {
+  //     return
+  //   }
 
-    return (
-      <Dialog
-        type="message"
-        className="send__dialog"
-        onClick={showAddToAddressBookModal}
-      >
-        {t('newAccountDetectedDialogMessage')}
-      </Dialog>
-    )
-  }
+  //   return (
+  //     <Dialog
+  //       type="message"
+  //       className="send__dialog"
+  //       onClick={showAddToAddressBookModal}
+  //     >
+  //       {t('newAccountDetectedDialogMessage')}
+  //     </Dialog>
+  //   )
+  // }
 }

@@ -8,6 +8,9 @@ import {
   getAddressBookEntry,
 } from '../../../selectors/selectors'
 import actions from '../../../store/actions'
+import {
+  setCustomGasPrice,
+} from '../../../ducks/gas/gas.duck'
 
 function mapStateToProps (state) {
   const ownedAccounts = accountsWithSendEtherInfoSelector(state)

@@ -84,7 +84,8 @@ TokenCell.prototype.render = function () {
       : `${currentTokenInFiat} ${currentCurrency.toUpperCase()}`
   }
 
-  const showFiat = Boolean(currentTokenInFiat) && currentCurrency.toUpperCase() !== symbol
+  //const showFiat = Boolean(currentTokenInFiat) && currentCurrency.toUpperCase() !== symbol
+  const showFiat = false
 
   return (
     h('div.token-list-item', {
