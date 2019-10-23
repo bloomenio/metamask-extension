@@ -15,6 +15,7 @@ export default class MetaFoxLogo extends PureComponent {
         onClick={this.props.onClick}
         className="app-header__logo-container"
       >
+
         <img
           height={30}
           src="/images/logo/metamask-logo-horizontal.svg"
@@ -25,6 +26,13 @@ export default class MetaFoxLogo extends PureComponent {
           src="/images/logo/metamask-fox.svg"
           className="app-header__metafox-logo app-header__metafox-logo--icon"
         />
+
+        <img
+          height={20}
+
+          style={{"margin-left": "20px"}}
+          src='/images/logo/bloomen.svg'></img>
+
       </div>
     )
   }
