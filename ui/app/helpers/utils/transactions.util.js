@@ -224,9 +224,5 @@ export function getStatusKey (transaction) {
  * @param {Object} rpcPrefs
  */
 export function getBlockExplorerUrlForTx (networkId, hash, rpcPrefs = {}) {
-  if (rpcPrefs.blockExplorerUrl) {
-    return `${rpcPrefs.blockExplorerUrl}/tx/${hash}`
-  }
-  const prefix = prefixForNetwork(networkId)
-  return `https://${prefix}etherscan.io/tx/${hash}`
+  return `https://alastria-explorer.councilbox.com/transaction/${hash}`
 }
